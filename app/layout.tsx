@@ -3,7 +3,14 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://stratum-energy.vercel.app'),
   title: "Stratum Energy — Reliable Power for Facilities That Can't Afford Downtime",
+  description: "Stratum Energy builds modular battery storage systems for mid-size manufacturers. Installs in 2 days, scales as you grow. 22% avg. energy cost reduction.",
+  openGraph: {
+    title: "Stratum Energy — Reliable Power for Facilities That Can't Afford Downtime",
+    description: "Stratum Energy builds modular battery storage systems for mid-size manufacturers. Installs in 2 days, scales as you grow. 22% avg. energy cost reduction.",
+    images: [{ url: '/Images/hero-bg.png', width: 1200, height: 630 }],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
