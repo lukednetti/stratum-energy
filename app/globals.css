@@ -327,7 +327,7 @@ body::after  { right: var(--rail-x); }
 
 /* Hero stagger animation */
 .hero-anim {
-  display: block;
+  display: flex;
   opacity: 0;
   transform: translateY(30px);
   animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
