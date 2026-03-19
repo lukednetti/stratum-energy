@@ -9,34 +9,6 @@ type ProductFeature = { heading: string; body: string }
 type ProcessCard = { title: string; body: string }
 type ProofStat = { value: string; label: string }
 
-export type HomepageData = {
-  heroTag?: string
-  heroHeadlineLines?: string[]
-  heroSub?: string
-  heroSpecs?: SpecItem[]
-  problemTag?: string
-  problemHeadline?: string
-  problemP1?: string
-  problemP2?: string
-  productTag?: string
-  productHeadline?: string
-  productBody?: string
-  productFeatures?: ProductFeature[]
-  processTag?: string
-  processHeadline?: string
-  processCards?: ProcessCard[]
-  proofTag?: string
-  proofHeadline?: string
-  proofStats?: ProofStat[]
-  audienceHeadline?: string
-  audienceBody?: string
-  osTag?: string
-  osHeadline?: string
-  osBody?: string
-  ctaHeadline?: string
-  footerTagline?: string
-} | null
-
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function parseVal(text: string) {
@@ -151,34 +123,34 @@ const DEFAULTS = {
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-export default function HomeClient({ data }: { data: HomepageData }) {
-  const d = data ?? {}
-
-  const heroTag = d.heroTag ?? DEFAULTS.heroTag
-  const heroHeadlineLines = d.heroHeadlineLines ?? DEFAULTS.heroHeadlineLines
-  const heroSub = d.heroSub ?? DEFAULTS.heroSub
-  const heroSpecs = d.heroSpecs ?? DEFAULTS.heroSpecs
-  const problemTag = d.problemTag ?? DEFAULTS.problemTag
-  const problemHeadline = d.problemHeadline ?? DEFAULTS.problemHeadline
-  const problemP1 = d.problemP1 ?? DEFAULTS.problemP1
-  const problemP2 = d.problemP2 ?? DEFAULTS.problemP2
-  const productTag = d.productTag ?? DEFAULTS.productTag
-  const productHeadline = d.productHeadline ?? DEFAULTS.productHeadline
-  const productBody = d.productBody ?? DEFAULTS.productBody
-  const productFeatures = d.productFeatures ?? DEFAULTS.productFeatures
-  const processTag = d.processTag ?? DEFAULTS.processTag
-  const processHeadline = d.processHeadline ?? DEFAULTS.processHeadline
-  const processCards = d.processCards ?? DEFAULTS.processCards
-  const proofTag = d.proofTag ?? DEFAULTS.proofTag
-  const proofHeadline = d.proofHeadline ?? DEFAULTS.proofHeadline
-  const proofStats = d.proofStats ?? DEFAULTS.proofStats
-  const audienceHeadline = d.audienceHeadline ?? DEFAULTS.audienceHeadline
-  const audienceBody = d.audienceBody ?? DEFAULTS.audienceBody
-  const osTag = d.osTag ?? DEFAULTS.osTag
-  const osHeadline = d.osHeadline ?? DEFAULTS.osHeadline
-  const osBody = d.osBody ?? DEFAULTS.osBody
-  const ctaHeadline = d.ctaHeadline ?? DEFAULTS.ctaHeadline
-  const footerTagline = d.footerTagline ?? DEFAULTS.footerTagline
+export default function HomeClient() {
+  const {
+    heroTag,
+    heroHeadlineLines,
+    heroSub,
+    heroSpecs,
+    problemTag,
+    problemHeadline,
+    problemP1,
+    problemP2,
+    productTag,
+    productHeadline,
+    productBody,
+    productFeatures,
+    processTag,
+    processHeadline,
+    processCards,
+    proofTag,
+    proofHeadline,
+    proofStats,
+    audienceHeadline,
+    audienceBody,
+    osTag,
+    osHeadline,
+    osBody,
+    ctaHeadline,
+    footerTagline,
+  } = DEFAULTS
 
   const [scrolled, setScrolled] = useState(false)
   const [ctaVisible, setCtaVisible] = useState(false)

@@ -1,6 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  serverExternalPackages: ['@sanity/client', 'sanity'],
-}
+const nextConfig = {}
 
 export default nextConfig
